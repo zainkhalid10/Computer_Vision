@@ -1,5 +1,5 @@
 
-##Computer Vision Projects with MediaPipe & OpenCV
+#Computer Vision Projects with MediaPipe & OpenCV
 This repository showcases a collection of real-time computer vision applications built using MediaPipe and OpenCV. Each project explores interactive and intuitive gesture-based interfaces, demonstrating how machine learning models can be used to interpret human movement and perform dynamic tasks with just a webcam.
 
 Whether it's detecting body parts, drawing in the air, performing calculations using hand gestures, or creating visual illusions like invisibility, these projects combine creativity and technical skill to bring engaging human-computer interaction experiences to life.
