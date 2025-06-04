@@ -1,0 +1,55 @@
+#FingerTracker: Gesture-Based Drawing Using MediaPipe and OpenCV
+This Python program uses MediaPipe and OpenCV to implement a gesture-controlled drawing application that allows users to draw on a 
+virtual canvas using their left index finger, while toggling drawing mode using a right-hand fist gesture.
+
+
+Key Features:
+🖐️ Dual Hand Tracking: Utilizes MediaPipe to detect and track both hands in real time.
+
+✍️ Drawing with Index Finger: When drawing mode is enabled, the left index fingertip draws on a transparent canvas overlaid on the camera feed.
+
+✊ Fist Gesture Toggle: A right-hand fist (held for at least 1 second) toggles the drawing mode (on/off).
+
+🧠 Finger Counting: Robust finger detection logic estimates how many fingers are up using joint landmark comparisons, including a special thumb check.
+
+🧼 Canvas Clearing: Press 'c' to clear the canvas.
+
+❌ Exit: Press 'q' to quit the application.
+
+
+How It Works:
+Hand Detection:
+
+MediaPipe identifies and classifies each hand as Left or Right from the camera's perspective.
+
+This is interpreted in a mirror view: MediaPipe’s "Left" is the user’s right hand, and "Right" is the left hand.
+
+Drawing Logic:
+
+If drawing mode is active and the left index fingertip is detected, the program draws lines between successive index finger positions.
+
+The drawn strokes appear semi-transparent over the video feed.
+
+Fist-Based Control:
+
+If a fist is detected on the user's right hand for more than 1 second, the drawing mode toggles on or off.
+
+This enables hands-free mode switching without pressing buttons.
+
+Dependencies:
+opencv-python
+
+mediapipe
+
+numpy
+
+A working webcam
+
+Usage:
+Run the script and:
+
+Use your left hand's index finger to draw.
+
+Show a fist with your right hand for one second to toggle drawing mode.
+
+Press 'c' to clear the canvas, 'q' to quit.
