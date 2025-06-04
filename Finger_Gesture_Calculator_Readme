@@ -1,0 +1,58 @@
+#Finger Gesture Calculator
+This project implements a finger-based gesture calculator using MediaPipe and OpenCV. It allows users to perform basic arithmetic operations (addition, subtraction, multiplication, and division) using only their hand gestures in front of a webcam.
+
+🎯 How It Works
+Finger Counting: Detects how many fingers are held up and interprets this as a number (0–10).
+
+Gesture Recognition: Detects specific hand gestures representing operations:
+
+➕ Plus: Crossed index and middle fingers
+
+➖ Minus: Index finger up only
+
+✖️ Multiply: Spread "V" sign (index and middle)
+
+➗ Divide: Only pinky finger up
+
+State Machine:
+
+WAIT_FIRST – User shows the first number
+
+WAIT_OP – User shows the arithmetic operation
+
+WAIT_SECOND – User shows the second number
+
+SHOW_RESULT – The system computes and displays the result
+
+Reset Mechanism: Show a closed fist for 1 second to reset and start a new calculation.
+
+🧠 Features
+Real-time hand landmark tracking
+
+Finger-counting with stability check (hold steady for 3 seconds)
+
+Gesture-based operation detection with accuracy threshold
+
+Result display and automatic reset mechanism
+
+Intuitive on-screen instructions and status feedback
+
+📦 Dependencies
+Python 3.7+
+OpenCV
+MediaPipe
+NumPy
+
+Install via:
+          pip install opencv-python mediapipe numpy
+Run the calculator:
+          python finger_calculator.py
+
+Hold up fingers to show:
+A number (0–10) → First operand
+An operation gesture (as defined above)
+Another number → Second operand
+
+
+✅ The result is shown on-screen.
+✊ Show a fist for 1 second to reset.
