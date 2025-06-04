@@ -1,0 +1,63 @@
+Body Part Detector
+This project uses MediaPipe and OpenCV to detect when a user points at specific body parts using their index finger in real time. It combines pose and hand detection to determine proximity between the index finger tip and major body landmarks.
+
+✨ Features
+Real-time video processing from webcam
+
+Detection of key body landmarks (e.g., shoulders, elbows, knees)
+
+Hand tracking with finger landmark extraction
+
+Identifies the body part being pointed at using the index finger
+
+Visual feedback with overlayed text and landmarks
+
+🧠 How It Works
+Pose Detection: MediaPipe Pose estimates 33 body landmarks in real time.
+
+Hand Detection: MediaPipe Hands tracks the hand and extracts the index finger tip position.
+
+Proximity Check: The system checks if the index finger tip is within a threshold distance from any body landmark.
+
+Result: Displays the name of the detected body part being pointed at.
+
+📦 Installation
+1. Clone the repository:
+                  git clone https://github.com/yourusername/body-part-detector.git
+                  cd body-part-detector
+2. (Optional) Create and activate a virtual environment:
+                  python -m venv venv
+                  source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. Install dependencies:
+                  pip install -r requirements.txt
+
+NOTE: Make sure your system has a webcam and Python 3.7+
+
+🚀 Usage
+Simply run the script:
+                  python body_detector.py
+
+Press q to quit the application.
+
+
+🧾 Requirements
+Python 3.7+
+OpenCV
+MediaPipe
+NumPy
+
+🛠️ Customization
+Adjust self.detection_threshold or pixel distance (default: 50 px) in the script for sensitivity.
+Modify max_num_hands if you want to detect both hands.
+Tune the system for specific use cases like gesture recognition or fitness applications.
+
+🧑‍💻 Author
+Muhammad Zain
+GitHub: @zainkhalid10
+
+
+
+
+
+
+
