@@ -1,0 +1,73 @@
+#VanishingShirt: Real-Time Shirt Vanishing Effect Using MediaPipe and OpenCV
+This Python application uses MediaPipe and OpenCV to create a vanishing effect, where parts of a person (typically the shirt or body) 
+become invisible and are replaced by a previously captured background. This illusion is toggled by a palm gesture or activated automatically after a short delay.
+
+
+🧠 Core Concept:
+The effect is achieved using background subtraction — comparing the live webcam frame to a stored background image (when the user is absent).
+
+Areas that differ significantly from the background (i.e., the user’s body or shirt) are replaced with the original background, making them appear invisible.
+
+Key Features:
+🖐️ Hand Detection: Uses MediaPipe to track hands and detect palm gestures (all fingers down).
+
+🎬 Auto Background Capture:
+
+Begins with a 3-second countdown to let the user step out of the frame.
+
+Captures the static background for comparison.
+
+🧞‍♂️ Vanish Mode:
+
+Auto-starts after 5 seconds of background capture.
+
+Can be toggled manually by holding a palm gesture for 0.7 seconds.
+
+✨ Invisibility Effect:
+
+Detected foreground (e.g. user’s body) is replaced with the original background.
+
+Uses grayscale difference and thresholding for masking.
+
+🔁 Re-capture Background: Press 'b' to recapture the background anytime.
+
+❌ Exit: Press 'q' to quit the program.
+
+How It Works:
+Background Capture:
+
+At launch (or when 'b' is pressed), a 3-second countdown lets the user leave the frame.
+
+The system captures a clean background image.
+
+Hand Gesture Detection:
+
+Using landmark positions, the system checks if all fingers are down (palm gesture).
+
+Holding the palm gesture toggles vanish mode on/off.
+
+Invisibility Logic:
+
+Computes the difference between the live frame and the background.
+
+Uses a mask to isolate moving objects (typically the user).
+
+These parts are replaced with the background image.
+
+Dependencies:
+opencv-python
+
+mediapipe
+
+numpy
+
+A webcam
+
+Instructions:
+Run the script and step out of the frame during the countdown.
+
+Return and observe the vanish effect on your shirt/body.
+
+Toggle the effect with a palm gesture.
+
+Press 'b' to reset the background, 'q' to quit.
